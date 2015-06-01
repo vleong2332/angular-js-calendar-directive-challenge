@@ -1,0 +1,27 @@
+<nav>
+   <div id="select-wrapper">
+
+      <select name="month" id="selectMonth"
+      ng-model="calendarSetting.currentMonth"
+      ng-change="calendarRange = changeCalendarRange()">
+         <option
+         ng-repeat="month in calendarSetting.months"
+         value="{{ month.cardinal }}"
+         ng-selected="{{ month.cardinal == calendarSetting.currentMonth }}">
+            {{ month.name }}
+         </option>
+      </select>
+
+      <select name="year" id="selectYear"
+      ng-model="calendarSetting.currentYear"
+      ng-change="calendarRange = changeCalendarRange()">
+         <option
+         ng-repeat="year in calendarSetting.years"
+         value="{{ year }}"
+         ng-selected="{{ year == calendarSetting.currentYear }}">
+            {{ year }}
+         </option>
+      </select>
+
+   </div>
+</nav>

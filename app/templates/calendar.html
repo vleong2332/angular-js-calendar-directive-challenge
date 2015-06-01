@@ -1,0 +1,18 @@
+<div id="calendar-wrapper" class="clearfix">
+   <div class="day_name">S</div>
+   <div class="day_name">M</div>
+   <div class="day_name">T</div>
+   <div class="day_name">W</div>
+   <div class="day_name">R</div>
+   <div class="day_name">F</div>
+   <div class="day_name">S</div>
+   <div
+   ng-repeat="entry in calendarRange.days"
+   ng-class="{
+      day_entry: true,
+      not_of_month: (entry.month + 1 != calendarSetting.currentMonth),
+      weekend: !entry.weekday
+   }">
+      <p class="day_heading">{{ entry.day }}</p>
+   </div>
+</div>

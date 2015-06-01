@@ -1,1 +1,81 @@
-/* your css code goes here */
+* {
+   box-sizing: border-box;
+   font-family: 'Josefin Sans', Helvetica, Arial;
+}
+body, html {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+}
+.clearfix::after {
+   content: '';
+   display: block;
+   clear: both;
+}
+
+
+nav {
+   width: 100%;
+   background-color: #333;
+}
+#select-wrapper {
+   max-width: 1400px;
+   min-width: 700px;
+   padding: 0.5em 0.15em;
+   margin: 0 auto;
+}
+
+
+
+#calendar-wrapper {
+   max-width: 1400px;
+   min-width: 700px;
+   margin: 0 auto;
+   padding: 0.5em 0 0 0;
+   display: block;
+}
+.day_name {
+   width: calc(14.286% - 0.3em);
+   max-width: calc(200px - 0.3em);
+   min-width: calc(100px - 0.3em);
+   padding: 0.25em 0;
+   display: inline-block;
+   margin: 0.15em;
+   float: left;
+   text-align: center;
+   font-size: 1.2em;
+   background-color: #777;
+   color: #FFF;
+}
+.day_entry {
+   width: calc(14.286% - 0.3em);
+   max-width: calc(200px - 0.3em);
+   min-width: calc(100px - 0.3em);
+   height: 120px;
+   border: 1px solid #999;
+   display: inline-block;
+   margin: 0.15em;
+   border-bottom-right-radius: 10px;
+   cursor: pointer;
+}
+.day_entry:hover {
+   border-color: #333;
+}
+.day_entry:hover p {
+   background-color: rgba(0,100,255,0.25);
+}
+.day_entry.weekend:hover p {
+   background-color: rgba(255,100,0,0.25);
+}
+.not_of_month {
+   background-color: #999;
+}
+.day_heading {
+   margin: 0;
+   background-color: rgba(0,100,255,0.1);
+   font-family: 'Josefin Sans Semibold';
+   padding-left: 0.35em;
+}
+.weekend .day_heading {
+   background-color: rgba(255,100,0,0.1);
+}
