@@ -4,4 +4,4 @@ Basic calendar directive that can be used to build a more advance calendar or be
 
 #### Note
 
-Use Issues to report problems or submit ideas/improvements.
+Use "Issues" to report problems or submit ideas/improvements.
