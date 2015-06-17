@@ -1,6 +1,6 @@
 var calendarDemoApp = angular.module('calendarDemoApp', []);
 
-
+//----------------------------------------------------------
 
 calendarDemoApp.run(function($rootScope, getYearRange) {
    // Setting current month and year
@@ -27,7 +27,7 @@ calendarDemoApp.run(function($rootScope, getYearRange) {
    };
 });
 
-
+//----------------------------------------------------------
 
 calendarDemoApp.factory('changeCalendarRange', function($rootScope) {
    return function() {
@@ -38,6 +38,9 @@ calendarDemoApp.factory('changeCalendarRange', function($rootScope) {
       return CalendarRange.getMonthlyRange(newDate);
    }
 });
+
+//----------------------------------------------------------
+
 calendarDemoApp.factory('getYearRange', function() {
    var now = new Date();
    var currentYear = now.getFullYear();
@@ -50,26 +53,26 @@ calendarDemoApp.factory('getYearRange', function() {
    return years;
 });
 
-
+//----------------------------------------------------------
 
 calendarDemoApp.controller('calendarCtrl', function($rootScope, changeCalendarRange) {
    $rootScope.changeCalendarRange = changeCalendarRange;
    $rootScope.calendarRange = CalendarRange.getMonthlyRange(new Date());
 });
 
-
+//----------------------------------------------------------
 
 calendarDemoApp.directive('calendar', function() {
    return {
       restrict: 'E',
       replace: true,
       templateUrl: 'templates/calendar.html'
-   }
+   ;
 });
 calendarDemoApp.directive('navigation', function() {
    return {
       restrict: 'E',
       replace: true,
       templateUrl: 'templates/navigation.html'
-   }
+   };
 });
